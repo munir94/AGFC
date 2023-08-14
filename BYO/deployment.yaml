@@ -39,7 +39,7 @@ spec:
       containers:
         - name: mtls-app
           imagePullPolicy: Always
-          image: nginx:latest
+          image: nginx:1.23.2
           ports:
             - containerPort: 8443
           volumeMounts:
