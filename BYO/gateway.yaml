@@ -24,4 +24,4 @@ spec:
         name: frontend.com
   addresses:
   - type: alb.networking.azure.io/alb-frontend
-    value: AGW-FE01
+    value: AGW-FE01 #FrontEnd
