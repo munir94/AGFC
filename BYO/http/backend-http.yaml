@@ -1,0 +1,16 @@
+apiVersion: alb.networking.azure.io/v1
+kind: BackendTLSPolicy
+metadata:
+  name: aspnet-app-tls-policy
+  #namespace: test-infra
+spec:
+  targetRef:
+    group: ""
+    kind: Service
+    name: aspnet
+    #namespace: test-infra
+  default:
+    sni: aspnet.backend.com
+    ports:
+    - port: 80
+    

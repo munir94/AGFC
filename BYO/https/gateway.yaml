@@ -4,7 +4,7 @@ metadata:
   name: gateway-01
   namespace: test-infra
   annotations:
-    alb.networking.azure.io/alb-id: /subscriptions/xxx/resourcegroups/AKS_RG/providers/Microsoft.ServiceNetworking/trafficControllers/AGW-C01
+    alb.networking.azure.io/alb-id: /subscriptions/xxxx/resourcegroups/AKS_RG/providers/Microsoft.ServiceNetworking/trafficControllers/AGW-C01
     #alb.networking.azure.io/alb-id: $RESOURCE_ID ##invalid ID 
 
 spec:

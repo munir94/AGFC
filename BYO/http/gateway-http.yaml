@@ -1,0 +1,21 @@
+apiVersion: gateway.networking.k8s.io/v1beta1
+kind: Gateway
+metadata:
+  name: gateway-01
+  #namespace: test-infra
+  annotations:
+    #alb.networking.azure.io/alb-id: /subscriptions/27a828db-53fb-4f4e-a46b-3fc8332e59dd/resourcegroups/AKS_RG/providers/Microsoft.ServiceNetworking/trafficControllers/AGW-C01
+    #alb.networking.azure.io/alb-id: $RESOURCE_ID ##invalid ID 
+
+spec:
+  gatewayClassName: azure-alb-external
+  listeners:
+  - name: http-listener
+    port: 80
+    protocol: HTTP
+    allowedRoutes:
+      namespaces:
+        from: Same
+  addresses:
+  - type: alb.networking.azure.io/alb-frontend
+    value: AGW-FE01 #FrontEnd
