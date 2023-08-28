@@ -88,3 +88,4 @@ add-type @"
 "@
 [System.Net.ServicePointManager]::CertificatePolicy = New-Object TrustAllCertsPolicy
 Invoke-WebRequest https://$fqdn/
+Invoke-WebRequest http://$fqdn/
